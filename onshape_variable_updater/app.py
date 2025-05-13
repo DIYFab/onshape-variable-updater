@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import requests
-from onshape_variable_updater.onshape_utils import create_headers, BASE_URL
+from onshape_utils import create_headers, BASE_URL
+
 
 
 app = Flask(__name__)
