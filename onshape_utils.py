@@ -13,6 +13,7 @@ def create_headers(method, url_path):
     date = time.strftime('%a, %d %b %Y %H:%M:%S GMT', time.gmtime())
     hmac_data = f'(request-target): {method.lower()} {url_path}\ndate: {date}'
 
+    print("Current time:", time.time())
     print("\n--- HMAC DEBUG ---")
     print("Method:", method)
     print("URL Path:", url_path)
