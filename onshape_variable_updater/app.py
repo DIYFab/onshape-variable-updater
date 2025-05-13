@@ -34,8 +34,8 @@ def update_variables():
         return jsonify({"message": "Variables updated successfully!"})
 
     except requests.exceptions.RequestException as e:
-        print(e.response.text)
-        return jsonify({"error": "Failed to update variables"}), 500
+    print("Onshape API error:", e.response.text)
+    return jsonify({"error": "Failed to update variables"}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
