@@ -20,6 +20,9 @@ def create_headers(method, url_path):
     print("HMAC String:\n", hmac_data)
     print("Access Key:", ACCESS_KEY[:6] + "..." if ACCESS_KEY else "None")
     print("Secret Key:", "SET" if SECRET_KEY else "None")
+    print(f"Access key repr: {repr(ACCESS_KEY)}")
+    print(f"Secret key repr: {repr(SECRET_KEY)}")
+
 
     signature = base64.b64encode(
         hmac.new(SECRET_KEY.encode('utf-8'), hmac_data.encode('utf-8'), digestmod=hashlib.sha256).digest()
